@@ -1,5 +1,7 @@
-# close2home
-C2HH v2 custom WP Theme
+# Close To Home
+C2HH v2 custom WP Theme using Sage
+
+***
 
 # [Sage](https://roots.io/sage/)
 [![Build Status](https://travis-ci.org/roots/sage.svg)](https://travis-ci.org/roots/sage)
