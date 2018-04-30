@@ -1,0 +1,171 @@
+/* ==========================================================================
+  The Team
+   ========================================================================== */
+.team-members {
+
+  .team-nav {
+    border:0;
+    width:100%;
+
+    li {
+      margin:0 11.75% 0 0;
+      width:25.5%;
+      min-height:375px;
+
+      &:last-child{
+        margin:0;
+      }
+
+      a {
+        margin:0;
+        padding:0;
+        outline:0;
+        border:0;
+        @include border-radius(0);
+        @include transition(all .2s ease-in-out);
+        float:left;
+        display:block;
+
+        &:hover{
+            border:0;
+            background:none;
+            border-bottom:10px solid $brand-primary;
+        }
+
+        img{
+          margin:0;
+          max-width:100%;
+          display:block;
+          float:left;
+        }
+      }
+
+      &.active a {
+        border-bottom:25px solid $brand-primary;  
+      }
+    }
+  }
+}
+
+.team-content {
+  .team-pane {
+    margin-top:30px;
+    margin-bottom:30px;
+
+    h3 {
+      display:block;
+      margin:0 0 10px 0;
+      padding:0;
+      list-style:none;
+      color:$brand-primary;
+      font-size:32px;
+      font-weight:300;
+      float:none;
+      text-align:left;
+      text-transform:uppercase;
+
+      &:after {
+        display:none;
+      }
+    }
+
+    h4 {
+      display:block;
+      font-size:14px;
+      color:#000;
+      font-style:italic;
+      padding-bottom:30px;
+      font-weight:300;
+      line-height:20px;
+    }
+
+    h5 {
+        font-size:20px;
+        font-weight:300;
+        font-style:normal;
+        float:left;
+        color:$gray-darker;
+        padding:0;
+        line-height:20px;
+        text-transform:uppercase;
+        letter-spacing:-1px;
+    }
+
+    p {
+        margin-bottom:22px;
+    }
+
+    .connect {
+        float:right;
+        display:block;
+        margin:0;
+        padding:0;
+
+        li {
+          display:block;
+          float:left;
+          width:20px;
+          height:15px;
+          background-image: url('../img/icons/social_connect.png');
+          background-repeat:no-repeat;
+          text-indent:-99999px;
+          margin-right:10px;
+          
+          a {
+              display:block;
+              width:20px;
+              height:15px;
+          }
+
+          &.twitter {
+              background-position: left top;
+          }
+
+          &.email {
+              background-position:right top;
+          }
+        }
+    }
+  }
+}
+
+.advisory-board {
+  @include border(top, 1px, solid, $gray-light);
+
+  .advisory-nav {
+    border:0;
+
+    > li {
+      display:block;
+      float:none;
+      margin:5px 0;
+      border:0;
+      float:left;
+      width:100%;
+
+      a {
+        display:block;
+        margin:0;
+        padding:0 0 0 25px;
+        font-size:16px;
+        color:#000;
+        text-transform:uppercase;
+        height:42px;
+        line-height:42px;
+        font-weight:700;
+        border:0;
+        @include border-radius(0);
+      }
+
+      &.active {
+        a, a:hover {
+          background-color:$gray-darker;
+          color:#fff;
+          margin:0;
+          padding:0 0 0 25px;
+          border:0;
+        }
+      }
+    }
+  }
+}
