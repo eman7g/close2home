@@ -1,1 +1,97 @@
+/* ==========================================================================
+  Base
+   ========================================================================== */
+html, html a{
+  -webkit-font-smoothing: antialiased !important;
+}
 
+body { 
+  color:$text-color;
+  // line-height:$line-height-computed;
+}
+
+.wrap{
+  overflow:hidden;
+}
+
+.more{
+  font-size:12px;
+  line-height:18px;
+  color:$gray-darker;
+  text-transform:uppercase;
+  font-weight:900;
+  display:inline-block;
+
+  &:hover{
+    color:$gray-darker;
+  }
+
+  &:after{
+    content:"";
+    background: url('../img/icons/link_arrow.png') no-repeat left top;
+    width:6px;
+    height:10px;
+    float:right;
+    margin:4px 0 0 5px;
+  }
+}
+
+.sub-title{
+  color:$gray-darker;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height:18px;
+  font-size:$font-size-base;
+  letter-spacing: 1px;
+}
+
+hr{
+  @include border(top, 1px, solid, $gray-light);
+  margin:5px 0;
+  clear:both;
+  width:100%;
+  padding-bottom:22px;
+
+  &.title-divider{
+    @include border(top, 10px, solid, #000);
+    width:100px;
+    float:none;
+    margin:0 auto 40px auto;
+    padding:0;
+  }
+}
+
+textarea, input, a { outline: none; }
+
+input::-moz-focus-inner { 
+  border: 0; 
+}
+
+a, a:active, a:focus, input.button, input.button:active, input.button:focus{
+  outline:0;
+}
+
+.row-flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0;
+    min-width: 100%;
+}
+
+.col-flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+p.h4,
+p.h5 {
+  font-weight: normal;
+  color: #666;
+}

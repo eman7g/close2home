@@ -35,6 +35,27 @@ function setup() {
   // http://codex.wordpress.org/Function_Reference/set_post_thumbnail_size
   // http://codex.wordpress.org/Function_Reference/add_image_size
   add_theme_support('post-thumbnails');
+  	// Update default image sizes
+	// update_option( 'thumbnail_size_w', 100 );
+	// update_option( 'thumbnail_size_h', 100 );
+	// update_option( 'thumbnail_crop', 0 );
+	
+	// update_option( 'medium_size_w', 370 );
+	// update_option( 'medium_size_h', 9999 );
+	// update_option( 'medium_crop', 0 );
+	
+	// update_option( 'large_size_w', 940 );
+	// update_option( 'large_size_h', 999 );
+	// update_option( 'large_crop', 0 );
+	
+	// Custom image sizes
+	add_image_size( 'grid_small', 240, 162, TRUE );
+	add_image_size( 'grid_large', 480, 324, TRUE );
+	add_image_size( 'team_thumb', 240, 350, TRUE );
+	add_image_size( 'product_feature', 720, 0, TRUE );
+	add_image_size( 'product_thumb', 225, 150, TRUE );
+	add_image_size( 'product_thumb_large', 360, 240, TRUE );
+	add_image_size( 'product_gallery_thumb', 75, 75, TRUE );
 
   // Enable post formats
   // http://codex.wordpress.org/Post_Formats
@@ -104,3 +125,6 @@ function assets() {
   wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
+
+@ini_set( 'upload_max_size' , '500K' );
+
